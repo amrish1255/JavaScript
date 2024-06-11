@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>closer</title>
+</head>
+
+<body>
+  <button id="orange">orange</button>
+  <button id="green">green</button>
+</body>
+<script>
+
+  // lexcal scope
+  function colorchange(color) {
+
+    // closure
+    return function () {
+      document.body.style.backgroundColor = `${color}`;
+    }
+  }
+
+  document.getElementById('orange').onclick = colorchange('orange');
+  document.getElementById('green').onclick = colorchange('green');
+</script>
+
+</html>

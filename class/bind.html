@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React</title>
+</head>
+
+<body>
+
+  <button>LoggedIn</button>
+
+</body>
+
+<script>
+
+
+  class user {
+    constructor() {
+
+      this.library = 'hitesh';
+      this.server = 'http://google.com';
+      //requirement
+      document
+        .querySelector('button')
+        .addEventListener('click', this.clickOnButton.bind(this))
+
+
+    }
+    clickOnButton() {
+      document.querySelector('body');
+      console.log("hello hitesh");
+      console.log(
+        this
+      );
+
+    }
+
+  }
+
+  const userdetail = new user();
+
+
+</script>
+
+</html>

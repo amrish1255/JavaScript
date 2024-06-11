@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>applicationProgramIntrface</title>
+</head>
+
+<body style="background-color:#414141;">
+
+
+
+
+</body>
+
+<script>
+  const requestedUrl = 'http://api.github.com/users/hiteshchoudhary';
+  const xhr = new XMLHttpRequest(); // object , used to interect  with server 
+
+  xhr.open("GET", requestedUrl)  // open()=> used to send the request
+  xhr.onreadystatechange = function () { // onreadystatechange use to cchange the state  AND in this function used 
+    console.log(xhr.readyState); // readyState property describes the loading state of the document . When the value of this property changes, a readystatechange event fires on the document object.
+
+    if (xhr.readyState == 4) {
+      const data = JSON.parse(xhr.responseText);
+      console.log(data.followers);
+    }
+  }
+
+  xhr.send();
+
+
+</script>
+
+</html>
